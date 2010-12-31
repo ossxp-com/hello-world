@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include "version.h"
 
 int usage(int code)
 {
-    printf("Hello world example.\n"
-           "Copyright Jiang Xin <jiangxin AT ossxp DOT com>, 2009\n"
+    printf("Hello world example %s\n"
+           "Copyright Jiang Xin <jiangxin AT ossxp DOT com>, 2009.\n"
            "\n"
            "Usage:\n"
            "    hello\n"
@@ -11,7 +12,7 @@ int usage(int code)
            "    hello <username>\n"
            "            say hi to the user.\n\n"
            "    hello -h, -help\n"
-           "            this help screen.\n\n");
+           "            this help screen.\n\n", _VERSION);
     return code;
 }
 
@@ -26,4 +27,7 @@ main(int argc, char **argv)
     } else {
         printf ("Hi, %s.\n", argv[1]);
     }
+
+    printf( "(version: %s)\n", _VERSION );
+    return 0;
 }
