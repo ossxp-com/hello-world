@@ -1,3 +1,4 @@
 version.h
 main.o
 hello
+*.mo
