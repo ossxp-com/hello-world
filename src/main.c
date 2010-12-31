@@ -19,13 +19,20 @@ int usage(int code)
 int
 main(int argc, char **argv)
 {
+    char **p = NULL;
+
     if (argc == 1) {
         printf ("Hello world.\n");
     } else if ( strcmp(argv[1],"-h") == 0 ||
                 strcmp(argv[1],"--help") == 0 ) {
                 return usage(0);
     } else {
-        printf ("Hi, %s.\n", argv[1]);
+        p = &argv[1];
+        printf ("Hi,");
+        do {
+            printf (" %s", *p);
+        } while (*(++p));
+        printf (".\n");
     }
 
     printf( "(version: %s)\n", _VERSION );
