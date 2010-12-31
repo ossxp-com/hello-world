@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <getopt.h>
+
 #include "version.h"
 
 int usage(int code)
@@ -19,15 +21,44 @@ int usage(int code)
 int
 main(int argc, char **argv)
 {
-    if (argc == 1) {
+    int c;
+    char *uname = NULL;
+
+    while (1) {
+        int option_index = 0;
+        static struct option long_options[] = {
+            {"help", 0, 0, 'h'},
+            {0, 0, 0, 0}
+        };
+
+        c = getopt_long(argc, argv, "h",
+                        long_options, &option_index);
+        if (c == -1)
+           break;
+
+        switch (c) {
+        case 'h':
+            return usage(0);
+        default:
+            return usage(1);
+        }
+    }
+
+    if (optind < argc) {
+        uname = argv[optind];
+    }
+
+    if (uname == NULL) {
         printf ("Hello world.\n");
-    } else if ( strcmp(argv[1],"-h") == 0 ||
-                strcmp(argv[1],"--help") == 0 ) {
-                return usage(0);
     } else {
-        printf ("Hi, %s.\n", argv[1]);
+        printf ("Hi, %s.\n", uname);
     }
 
     printf( "(version: %s)\n", _VERSION );
     return 0;
 }
+
+
+/*
+ * vim: et ts=4 sw=4
+ */
