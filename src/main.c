@@ -11,7 +11,7 @@ int usage(int code)
            "            say hello to the world.\n\n"
            "    hello <username>\n"
            "            say hi to the user.\n\n"
-           "    hello -h, -help\n"
+           "    hello -h, --help\n"
            "            this help screen.\n\n", _VERSION);
     return code;
 }
