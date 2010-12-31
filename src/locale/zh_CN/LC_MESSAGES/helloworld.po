@@ -2,20 +2,23 @@
 # PACKAGE 软件包的简体中文翻译.
 # Copyright (C) 2010 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# JiangXin <jiangxin@ossxp.com>, 2010.
 #
+# JiangXin <jiangxin@ossxp.com>, 2010.
+# Jiang Xin <jiangxin@foo.bar>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-12-31 12:06+0800\n"
-"PO-Revision-Date: 2010-12-31 12:06+0800\n"
-"Last-Translator: JiangXin <jiangxin@ossxp.com>\n"
-"Language-Team: Chinese (simplified)\n"
+"PO-Revision-Date: 2010-12-31 12:10+0800\n"
+"Last-Translator: Jiang Xin <jiangxin@foo.bar>\n"
+"Language-Team: Chinese Simplified <kde-i18n-doc@kde.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: main.c:12
 #, c-format
@@ -34,13 +37,26 @@ msgid ""
 "            this help screen.\n"
 "\n"
 msgstr ""
+"Hello world 示例 %s\n"
+"版权所有 蒋鑫 <jiangxin AT ossxp DOT com>, 2009\n"
+"\n"
+"用法:\n"
+"    hello\n"
+"            世界你好。\n"
+"\n"
+"    hello <username>\n"
+"            向用户问您好。\n"
+"\n"
+"    hello -h, -help\n"
+"            显示本帮助页。\n"
+"\n"
 
 #: main.c:33
 #, c-format
 msgid "Hello world.\n"
-msgstr ""
+msgstr "世界你好。\n"
 
 #: main.c:38
 #, c-format
 msgid "Hi, %s.\n"
-msgstr ""
+msgstr "您好, %s.\n"
